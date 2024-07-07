@@ -14,13 +14,13 @@ $(document).keypress(function(event){
 
 //=====================FETCH SECTION=============================//
 
-const name = $('#name')
-const eye_color = $('#eye_color')
-const birthyear = $('#birthyear')
-const height = $('#height');
-const randomer = $('#randomer');
+const name = document.getElementById('name')
+const eye_color = document.getElementById('eye_color')
+const birthyear = document.getElementById('birthyear')
+const height = document.getElementById('height');
+const randomer = document.getElementById('randomer');
 
-const button = $('.change')
+const button = document.querySelector('.change')
 
 
 button.addEventListener('click', (e) =>{
