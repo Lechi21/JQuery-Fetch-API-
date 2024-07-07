@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(214, 208, 208);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+h1 {
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.butt {
+    color: aliceblue;
+    background-color: #044395;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.imageSection {
+    width: 100%; 
+    margin-top: 10px; 
+    border-radius: 5px; 
+    background-color: black;
+}
+
+img {
+    display: flex;
+    border-radius: 5px; 
+    width: 25%;
+    margin: 0 auto;
+}
+
+.API-Section {
+    width: 30%; 
+    border: 1px solid black; 
+    margin-top: 10px; 
+    border-radius: 5px; 
+    padding: 10px;
+}
+
+.change {
+    margin-top: 20px; 
+    border-radius: 5px; 
+    background-color: rgb(15, 157, 201); 
+    border: none; 
+    padding: 20px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    color: aliceblue; font-size: large;
+}
+
+@media only screen and (max-width: 700px) {
+        body {
+        background-color: rgb(255, 255, 255);
+        }
+        h1, h3 {
+            display: block;
+            text-align: center;
+        }
+        h2 {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .butt {
+            color: aliceblue;
+            background-color: #044395;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .imageSection {
+            width: 100%; 
+            margin-top: 10px; 
+            border-radius: 5px; 
+            background-color: black;
+        }
+        
+        img {
+            display: flex;
+            border-radius: 5px; 
+            width: 66%;
+            margin: 0 auto;
+        }
+
+        .API-Section {
+            width: auto;
+        }
+
+        .change {
+            width: 100%;
+        }
+
+    }
