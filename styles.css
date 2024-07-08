@@ -40,6 +40,7 @@ img {
     display: flex;
     border-radius: 5px; 
     width: 25%;
+    box-shadow: 10px 10px 5px #000000;
     margin: 0 auto;
 }
 
@@ -113,7 +114,8 @@ img {
         
         img {
             display: flex;
-            border-radius: 5px; 
+            border-radius: 5px;
+            box-shadow: 10px 10px 5px #000000;
             width: 66%;
             margin: 0 auto;
         }
