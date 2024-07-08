@@ -44,11 +44,31 @@ img {
 }
 
 .API-Section {
-    width: 30%; 
+    width: auto; 
     border: 1px solid black; 
     margin-top: 10px; 
     border-radius: 5px; 
     padding: 10px;
+}
+
+.chatt {
+    display: flex;
+}
+
+.left {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.right {
+    flex-basis: 50%;
 }
 
 .change {
@@ -100,6 +120,15 @@ img {
 
         .API-Section {
             width: auto;
+        }
+
+        .chatt {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .right {
+            margin-top: 20px;
         }
 
         .change {
