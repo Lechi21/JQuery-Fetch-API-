@@ -14,33 +14,43 @@ $(document).keypress(function(event){
 
 //=====================FETCH SECTION=============================//
 
-const name = document.getElementById('name')
-const eye_color = document.getElementById('eye_color')
-const birthyear = document.getElementById('birthyear')
-const height = document.getElementById('height');
-const randomer = document.getElementById('randomer');
 
-const button = document.querySelector('.change')
+$(document).ready(() => {
+    const $names = $('#names');
+    const $eyeColor = $('#eyeColor');
+    const $skinColor = $('#skinColor');
+    const $gender = $('#gender');
+    const $height = $('#height');
+    const $charactersImg = $('#CharactersImages');
+    const $randomer = $('#randomer');
 
+    const $button = $('.change');
 
-button.addEventListener('click', (e) =>{
-    e.preventDefault();
-    names.innerHTML = '<em>Loading....</em>';
-    eye_color.innerHTML = '<em>Loading....</em>';
-    birthyear.innerHTML = '<em>Loading....</em>';
-    height.innerHTML = '<em>Loading....</em>';
-    randomer.innerHTML = '<em>Loading....</em>';
+    $button.on('click', (e) => {
+        e.preventDefault();
 
+        $names.html('<em>Loading....</em>');
+        $eyeColor.html('<em>Loading....</em>');
+        $skinColor.html('<em>Loading....</em>');
+        $gender.html('<em>Loading....</em>');
+        $height.html('<em>Loading....</em>');
+        $randomer.html('<em>Loading....</em>');
+        $charactersImg.attr('src', '');
 
-    const randomNum = Math.ceil(Math.random() * 83);
-    fetch(`https://swapi.dev/api/people/${randomNum}/`)
-    .then((response) => response.json())
-    .then(characters => {
-    names.innerHTML = characters['name'];
-    eye_color.innerHTML = characters['eye_color'];
-    birthyear.innerHTML = characters['birth_year'];
-    height.innerHTML = characters['height'];
-    randomer.innerHTML = `Character is number ${randomNum}`;
-    })
-    .catch(error => console.error('Error:', error));
+        const randomNum = Math.ceil(Math.random() * 83);
+
+        $.get(`https://akabab.github.io/starwars-api/api/id/${randomNum}.json`, (character) => {
+            $names.text(character.name);
+            $eyeColor.text(character.eyeColor);
+            $skinColor.text(character.skinColor);
+            $gender.text(character.gender);
+            $height.text(character.height);
+            $randomer.text(`Character is number ${randomNum}`);
+
+            $charactersImg.attr('src', character.image);
+            $charactersImg.attr('alt', character.name);
+        }).fail((error) => {
+            console.error('Error:', error);
+        });
+    });
 });
