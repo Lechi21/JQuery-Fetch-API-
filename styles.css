@@ -61,15 +61,15 @@ img {
     overflow: hidden;
 }
 
-.left img {
+.right {
+    flex-basis: 50%;
+}
+
+.right img {
     width: 100%;
     height: auto;
     box-shadow: 10px 10px 5px #000000;
     object-fit: contain;
-}
-
-.right {
-    flex-basis: 50%;
 }
 
 .change {
@@ -128,7 +128,7 @@ img {
             flex-direction: column;
         }
         
-        .right {
+        .left {
             margin-top: 20px;
         }
 
