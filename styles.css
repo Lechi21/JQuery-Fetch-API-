@@ -62,7 +62,9 @@ img {
 }
 
 .right {
-    flex-basis: 50%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .right img {
@@ -126,10 +128,6 @@ img {
         .chatt {
             display: flex;
             flex-direction: column;
-        }
-        
-        .left {
-            margin-top: 20px;
         }
 
         .change {
