@@ -61,6 +61,11 @@ img {
     overflow: hidden;
 }
 
+.left .child {
+    display: flex;
+    margin-top: 5px;
+}
+
 .right {
     width: 100%;
     height: auto;
@@ -68,7 +73,7 @@ img {
 }
 
 .right img {
-    width: 100%;
+    width: 30%;
     height: auto;
     box-shadow: 10px 10px 5px #000000;
     object-fit: contain;
