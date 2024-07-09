@@ -135,6 +135,10 @@ img {
             flex-direction: column;
         }
 
+        .right img {
+            width: 50%;
+        }
+
         .change {
             width: 100%;
         }
